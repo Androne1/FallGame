@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RoomMover : MonoBehaviour
 {
+    [SerializeField] private float speed;
     private Rigidbody rb;
 
     void Awake()
@@ -13,6 +14,10 @@ public class RoomMover : MonoBehaviour
 
     void Update()
     {
-        rb.velocity = Vector3.forward;
+        rb.velocity = Vector3.up * speed;
+        if (transform.position.y >= 16)
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
     }
 }
