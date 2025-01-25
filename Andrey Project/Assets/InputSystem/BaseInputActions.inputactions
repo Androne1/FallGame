@@ -3,12 +3,12 @@
     "maps": [
         {
             "name": "BaseInputMap",
-            "id": "f0fc2871-a9d5-429a-9edc-2ec39e9351ed",
+            "id": "68477f71-eaa2-4c40-b499-450e836ac16b",
             "actions": [
                 {
                     "name": "Space",
                     "type": "Button",
-                    "id": "05045e11-0bb3-4345-83ed-ce337dab378f",
+                    "id": "79bdabda-b80b-490d-9eed-a9a8a775bad7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -18,7 +18,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "2b8b5682-a473-44a0-8998-0107d2242f74",
+                    "id": "f193ac88-daf0-4e9a-bcb5-a55151295e6e",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",

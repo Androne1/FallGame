@@ -6,22 +6,22 @@ using Random = UnityEngine.Random;
 
 public class RoomGenerator : MonoBehaviour
 {
-    [SerializeField] List <Rigidbody> roomRbs = new List<Rigidbody>();
-    [SerializeField] List <Transform> roomPos= new List<Transform>();
-    [SerializeField] Rigidbody firstRoom;
+    [SerializeField] List<Transform> roomsRbs = new List<Transform>();
+    [SerializeField] List<Transform> roomsPos = new List<Transform>();
+    [SerializeField] Transform firstRoom;
     [SerializeField] float speed;
-    [SerializeField] Transform camera;
     private int roomsCount;
-    private Action OnMoveEnd;
+    private Action<Transform> OnMoveEnded;
+
     // Start is called before the first frame update
     void Awake()
-    {   
-        OnMoveEnd = ()=> GenerateRoom(roomPos[roomPos.Count-1]);
+    {
+        OnMoveEnded = (pos) => GenerateRoom(pos);
         firstRoom.gameObject.SetActive(true);
-        roomsCount = roomRbs.Count;
+        roomsCount = roomsRbs.Count;
 
         StartCoroutine(MoveRoom(firstRoom));
-        foreach (var room in roomPos)
+        foreach (var room in roomsPos) 
         {
             GenerateRoom(room);
         }
@@ -29,28 +29,27 @@ public class RoomGenerator : MonoBehaviour
 
     private void GenerateRoom(Transform room)
     {
-        int randomNumber = Random.Range(0, roomsCount);
-        while (roomRbs[randomNumber].gameObject.activeSelf == true)
+        int randomNum = Random.Range(0, roomsCount);
+        while (roomsRbs[randomNum].gameObject.activeSelf == true)
         {
-            randomNumber = Random.Range(0, roomsCount);
+            randomNum = Random.Range(0, roomsCount);
         }
-        roomRbs[randomNumber].transform.position = room.position;
-        roomRbs[randomNumber].gameObject.SetActive(true);
-        StartCoroutine(MoveRoom(roomRbs[randomNumber]));
+        roomsRbs[randomNum].transform.position = room.position;
+        roomsRbs[randomNum].gameObject.SetActive(true);
+
+        StartCoroutine(MoveRoom(roomsRbs[randomNum]));
     }
 
-    private IEnumerator MoveRoom(Rigidbody body)
+    private IEnumerator MoveRoom(Transform body)
     {
-        body.velocity = Vector3.up * speed;
-
-        while (body.transform.position.y > camera.position.y)
+        while (body.transform.position.z > -7)
         {
+            body.position += Vector3.back * speed * Time.deltaTime;
             yield return null;
         }
 
-        body.velocity = Vector3.zero;
         body.gameObject.SetActive(false);
 
-        OnMoveEnd?.Invoke();
+        OnMoveEnded(roomsPos[roomsPos.Count-1]);
     }
 }
