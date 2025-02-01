@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1068.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 52
+  controlID: 42
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 43
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -321,7 +321,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Data
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -329,16 +329,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/Data
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\andromeda\Documents\UnityProjects\FallGame\Andrey Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a8310000
-    m_LastClickedID: 12712
-    m_ExpandedIDs: 0000000078310000e0850000e2850000e4850000e6850000e885000000ca9a3b
+    m_SelectedIDs: 9a910000
+    m_LastClickedID: 37274
+    m_ExpandedIDs: 0000000094310000a8310000ac310000da8f0000dc8f00009a9100009e91000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -366,7 +366,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e0850000e2850000e4850000e6850000e8850000
+    m_ExpandedIDs: 0000000094310000a8310000ac310000da8f0000dc8f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -506,9 +506,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 20320000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7ecaffff
+      m_SelectedIDs: b4d7ffff
+      m_LastClickedID: -10316
+      m_ExpandedIDs: fed8ffff268d0000908d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -875,9 +875,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.6017889, y: -1.1179974, z: 2.7790203}
+    m_Target: {x: -4.255679, y: -0.49151993, z: 11.288696}
     speed: 2
-    m_Value: {x: -1.6017889, y: -1.1179974, z: 2.7790203}
+    m_Value: {x: -4.255679, y: -0.49151993, z: 11.288696}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -923,13 +923,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.036394168, y: -0.96110326, z: 0.22574945, w: -0.15502478}
+    m_Target: {x: -0.17624688, y: -0.7282013, z: 0.20366783, w: -0.6302559}
     speed: 2
-    m_Value: {x: -0.035928257, y: -0.96175724, z: 0.22286074, w: -0.1551302}
+    m_Value: {x: -0.17624308, y: -0.7281856, z: 0.20366344, w: -0.6302423}
   m_Size:
-    m_Target: 6.0408607
+    m_Target: 9.803429
     speed: 2
-    m_Value: 5.780728
+    m_Value: 9.803429
   m_Ortho:
     m_Target: 0
     speed: 2
