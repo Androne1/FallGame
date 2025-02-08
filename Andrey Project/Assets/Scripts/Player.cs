@@ -6,8 +6,16 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private SkinHolder skinHolder;
     private Rigidbody body;
     private const int dangerLayer = 10;
+
+    private void Awake()
+    {
+        PlayerData.Load();
+        Instantiate(skinHolder.Skins[PlayerData.SkinNum], transform);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +35,14 @@ public class Player : MonoBehaviour
         if (collision.gameObject.layer == dangerLayer)
         {
             UI.Instance.ShowMenu(true);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<Coin>(out Coin coin))
+        {
+            coin.SpawnCoin();
         }
     }
 }
