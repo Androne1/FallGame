@@ -5,6 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class SkinHolder : ScriptableObject
 {
-    [SerializeField] private List<GameObject> skins = new List<GameObject>();
-    public List<GameObject> Skins => skins; 
+    [SerializeField] private List<SingleSkinSO> skins = new List<SingleSkinSO>();
+    public List<SingleSkinSO> Skins => skins; 
 }

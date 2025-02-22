@@ -15,7 +15,7 @@ public class Shop : MonoBehaviour
         for (int i = 0; i < skinHolder.Skins.Count; i++)
         {
             var shopButton = Instantiate(shopButtonPrefab, content);
-            shopButton.Init(i);
+            shopButton.Init(skinHolder.Skins[i]);
         }
     }
 
