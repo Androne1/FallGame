@@ -12,5 +12,8 @@ public class SingleSkinSO : ScriptableObject
     public string Name => name;
     public GameObject Visual => visual;
     public float Price => price;
+
+    
 }
+
 

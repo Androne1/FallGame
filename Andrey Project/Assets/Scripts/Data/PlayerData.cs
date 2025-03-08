@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 public class SaveData
 {
     public string currentSkins;
-    public List<string> unlockedSkons;
+    public List<string> unlockedSkins;
     public int coins;
     public int highScore;
 }
@@ -47,7 +47,7 @@ public static class PlayerData
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
             currentSkin = data.currentSkins;
-            unlockedSkins = data.unlockedSkons ?? new List<string>();
+            unlockedSkins = data.unlockedSkins ?? new List<string>();
             coins = data.coins;
             highScore = data.highScore;
         }
@@ -56,6 +56,7 @@ public static class PlayerData
     public static void ChangeSkin(string skinName)
     {
         currentSkin = skinName;
+        AddSkin(skinName);
     }
 
     public static void AddSkin(string skinName)
