@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   name: block
-  visual: {fileID: 0}
+  visual: {fileID: 519545806816989750, guid: 0ffec3af4c013234da53e932a79d3c5f, type: 3}
   price: 5

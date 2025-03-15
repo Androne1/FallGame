@@ -10,6 +10,7 @@ public class Shop : MonoBehaviour
 
     void Start()
     {
+        transform.localScale = Vector3.zero;
         backButton.onClick.AddListener(Close);
 
         for (int i = 0; i < skinHolder.Skins.Count; i++)
@@ -19,9 +20,14 @@ public class Shop : MonoBehaviour
         }
     }
 
-    private void Close()
+    public void Open()
     {
-        gameObject.SetActive(false);
+        transform.localScale = Vector3.one;
+    }
+
+    public void Close()
+    {
+        transform.localScale = Vector3.zero;
 
         PlayerData.Save();
     }

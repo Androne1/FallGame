@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PlayerSkinHolder
   m_EditorClassIdentifier: 
   skins:
-  - {fileID: 1969299649765714822, guid: e3700b6f3f086d746adbe4289f9f2908, type: 3}
-  - {fileID: 519545806816989750, guid: 0ffec3af4c013234da53e932a79d3c5f, type: 3}
-  - {fileID: 6844331107287994483, guid: f1e896b9f9494f248b4304128fb3c139, type: 3}
+  - {fileID: 11400000, guid: 9a9f0ba1eaded1f47b90956218f73f9a, type: 2}
+  - {fileID: 11400000, guid: c6f07295c69fdc5479859837f6e9bc5e, type: 2}
+  - {fileID: 11400000, guid: b41c755db356b8646a3db41ceb2effa6, type: 2}

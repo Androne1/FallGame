@@ -6,7 +6,7 @@ public class ShopButton : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI buttonText;
     [SerializeField] Button button;
-    [SerializeField] private TextMeshPro costText;
+    [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] Transform visualPlace;
 
     public void Init(SingleSkinSO skin)

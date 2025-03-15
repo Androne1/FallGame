@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Sphere
   m_EditorClassIdentifier: 
   name: smesharik
-  visual: {fileID: 0}
-  price: 10495
+  visual: {fileID: 6844331107287994483, guid: f1e896b9f9494f248b4304128fb3c139, type: 3}
+  price: 1049

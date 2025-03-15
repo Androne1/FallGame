@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cylinder
   m_EditorClassIdentifier: 
   name: pillar
-  visual: {fileID: 0}
+  visual: {fileID: 1969299649765714822, guid: e3700b6f3f086d746adbe4289f9f2908, type: 3}
   price: 45
