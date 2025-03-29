@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 [System.Serializable]
 public class SaveData
 {
-    public string currentSkins;
+    public string currentSkin;
     public List<string> unlockedSkins;
     public int coins;
     public int highScore;
@@ -27,13 +27,13 @@ public static class PlayerData
 
     public static void Save()
     {
-        SaveData data = new SaveData();
+        SaveData data = new SaveData()
         {
-            currentSkin = currentSkin;
-            unlockedSkins = unlockedSkins;
-            coins = coins;
-            highScore = highScore;
-        }
+            currentSkin = currentSkin,
+            unlockedSkins = unlockedSkins,
+            coins = coins,
+            highScore = highScore,
+        };
 
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(filePath, json);
@@ -46,7 +46,7 @@ public static class PlayerData
             string json = File.ReadAllText(filePath);
             SaveData data = JsonUtility.FromJson<SaveData>(json);
 
-            currentSkin = data.currentSkins;
+            currentSkin = data.currentSkin;
             unlockedSkins = data.unlockedSkins ?? new List<string>();
             coins = data.coins;
             highScore = data.highScore;
@@ -78,5 +78,15 @@ public static class PlayerData
         {
             highScore = score;
         }
+    }
+
+    public static void Reset()
+    {
+        currentSkin = string.Empty;
+        unlockedSkins = new List<string>();
+        coins = 0;
+        highScore = 0;
+
+        Save();
     }
 }

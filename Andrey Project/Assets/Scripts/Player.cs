@@ -15,9 +15,9 @@ public class Player : MonoBehaviour
         int skinNum = skinHolder.FindNumByName(PlayerData.CurrentSkin);
         if (skinNum < 0)
         {
-            Debug.LogError("—кин не найден");
+            skinNum = 0;
         }
-        Instantiate(skinHolder.Skins[0].Visual, transform);
+        Instantiate(skinHolder.Skins[skinNum].Visual, transform);
     }
 
     // Start is called before the first frame update
