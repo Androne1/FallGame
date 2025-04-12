@@ -12,15 +12,12 @@ public class RoomGenerator : MonoBehaviour
     [SerializeField] Transform firstRoom;
     [SerializeField] float speed;
     private Transform lastAddedRoom;
-    private int roomsCount;
     private Action<Transform> OnMoveEnded;
 
-    // Start is called before the first frame update
     void Awake()
     {
         OnMoveEnded = (pos) => GenerateRoom(pos, roomSize);
         firstRoom.gameObject.SetActive(true);
-        roomsCount = roomsRbs.Count;
 
         StartCoroutine(MoveRoom(firstRoom, true));
         foreach (var room in roomsPos) 

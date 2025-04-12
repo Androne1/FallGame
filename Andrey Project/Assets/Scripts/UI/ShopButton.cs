@@ -12,28 +12,26 @@ public class ShopButton : MonoBehaviour
 
     private bool unlocked;
 
-    public void Init(SingleSkinSO skin, Action<SingleSkinSO, Action,bool> buyAction, bool isUnlocked)
+    public void Init(SingleSkinSO skin, Action<SingleSkinSO, Action, bool> buyAction, bool isUnlocked)
     {
         unlocked = isUnlocked;
+
         if (isUnlocked)
         {
-            costText.text = "Unlocked";
-        }
-        else
+            costText.text = "unlocked";
+        } else
         {
-
-            buttonText.text = skin.Name;
             costText.text = skin.Price.ToString();
         }
-        buttonText.text = skin.Name;
+
+        buttonText.text = skin.Name;      
         Instantiate(skin.Visual, visualPlace);
-        button.onClick.AddListener(()  => buyAction?.Invoke(skin, Unlock, unlocked));
+        button.onClick.AddListener(() => buyAction?.Invoke(skin, Unlock, unlocked));
     }
 
-    private void Unlock()
+    public void Unlock()
     {
         unlocked = true;
-        costText.text = "Unlocked";
+        costText.text = "unlocked";
     }
-
 }

@@ -8,10 +8,10 @@ public class SingleSkinSO : ScriptableObject
 {
     [SerializeField] private string name;
     [SerializeField] private GameObject visual;
-    [SerializeField] private int price;
+    [SerializeField] private float price;
     public string Name => name;
     public GameObject Visual => visual;
-    public int Price => price;
+    public float Price => price;
 
     
 }
